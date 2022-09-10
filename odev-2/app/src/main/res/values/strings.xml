@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Week3AppNavigation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="two_fa">2FA\nAUTHENTICATION</string>
+    <string name="two_fa_button_text">AUTHENTICATE</string>
+    <string name="login_button_text">LOGIN</string>
+    <string name="login_screen_text">Login</string>
+    <string name="main_text">Login Completed.\nBack press will exit from the app.</string>
+</resources>
