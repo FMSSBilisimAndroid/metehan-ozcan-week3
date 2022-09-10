@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:defaultNavHost="false"
+    app:startDestination="@id/login_graph">
+
+    <navigation
+        android:id="@+id/main_graph"
+        app:startDestination="@id/mainActivity">
+        <activity
+            android:id="@+id/mainActivity"
+            android:name="com.patika.week3appnavigation.MainActivity"
+            android:label="activity_home"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"
+            tools:layout="@layout/activity_main" />
+
+    </navigation>
+
+    <navigation
+        android:id="@+id/login_graph"
+        app:startDestination="@id/loginFragment">
+        <dialog
+            android:id="@+id/dialogScreen"
+            android:name="com.patika.week3appnavigation.DialogScreen"
+            android:label="DialogScreen">
+            <action
+                android:id="@+id/action_dialogScreen_to_homeActivity"
+                app:destination="@id/main_graph" />
+        </dialog>
+        <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.patika.week3appnavigation.LoginFragment"
+            android:label="fragment_login"
+            tools:layout="@layout/fragment_login">
+            <action
+                android:id="@+id/action_loginFragment_to_twoFAFragment"
+                app:destination="@id/twoFAFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/twoFAFragment"
+            android:name="com.patika.week3appnavigation.TwoFAFragment"
+            android:label="TwoFAFragment"
+            tools:layout="@layout/fragment_two_f_a">
+            <action
+                android:id="@+id/action_twoFAFragment_to_dialogScreen"
+                app:destination="@id/dialogScreen" />
+        </fragment>
+    </navigation>
+</navigation>
