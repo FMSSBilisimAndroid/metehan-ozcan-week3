@@ -8,8 +8,8 @@ import androidx.navigation.fragment.findNavController
 
 class DialogScreen : DialogFragment() {
     /**
-     * Dialog screen that navigates to MainActivity if user approved authentication
-     * Clears backstack after navigate
+     * Login Dialog screen that navigates to MainFragment if user approved authentication
+     *
      */
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return activity?.let {
