@@ -2,7 +2,7 @@
 
 * Navigation component ile nested graph kullanımı.
 * Login ve Main olmak üzere , iki ayrı nested graph kullanıldı. 
-* Login ekranında işlem tamamlandıktan sonra main ekranından geri dönüş engellenmiş ve uygulamadan çıkışı sağlanmıştır.
+* Login ekranındaki login ve authentication işlemi tamamlandıktan sonra main ekranından geri dönüş engellenmiş ve uygulamadan çıkışı sağlanmıştır.
 
 
 
