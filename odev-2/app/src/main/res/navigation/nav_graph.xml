@@ -5,20 +5,6 @@
     android:id="@+id/nav_graph"
     app:defaultNavHost="false"
     app:startDestination="@id/login_graph">
-
-    <navigation
-        android:id="@+id/main_graph"
-        app:startDestination="@id/mainActivity">
-        <activity
-            android:id="@+id/mainActivity"
-            android:name="com.patika.week3appnavigation.MainActivity"
-            android:label="activity_home"
-            app:popUpTo="@id/nav_graph"
-            app:popUpToInclusive="true"
-            tools:layout="@layout/activity_main" />
-
-    </navigation>
-
     <navigation
         android:id="@+id/login_graph"
         app:startDestination="@id/loginFragment">
@@ -27,8 +13,11 @@
             android:name="com.patika.week3appnavigation.DialogScreen"
             android:label="DialogScreen">
             <action
-                android:id="@+id/action_dialogScreen_to_homeActivity"
-                app:destination="@id/main_graph" />
+                android:id="@+id/action_dialogScreen_to_homeFragment"
+                app:destination="@id/main_graph"
+                app:popUpTo="@id/nav_graph"
+                app:popUpToInclusive="true"
+                />
         </dialog>
         <fragment
             android:id="@+id/loginFragment"
@@ -46,7 +35,18 @@
             tools:layout="@layout/fragment_two_f_a">
             <action
                 android:id="@+id/action_twoFAFragment_to_dialogScreen"
-                app:destination="@id/dialogScreen" />
+                app:destination="@id/dialogScreen"
+                />
+        </fragment>
+    </navigation>
+    <navigation
+        android:id="@+id/main_graph"
+        app:startDestination="@id/mainFragment">
+        <fragment
+            android:id="@+id/mainFragment"
+            android:name="com.patika.week3appnavigation.MainFragment"
+            android:label="fragment_main"
+            tools:layout="@layout/fragment_main">
         </fragment>
     </navigation>
 </navigation>
