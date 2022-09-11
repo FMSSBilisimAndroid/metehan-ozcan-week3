@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.patika.week3appnavigation.databinding.FragmentLoginBinding
 
+
 class LoginFragment : Fragment() {
     private lateinit var fragmentLoginBinding: FragmentLoginBinding
 

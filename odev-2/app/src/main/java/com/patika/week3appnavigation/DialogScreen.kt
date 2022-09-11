@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 class DialogScreen : DialogFragment() {
     /**
      * Dialog screen that navigates to MainActivity if user approved authentication
-     * Clears backstack after navigate -
+     * Clears backstack after navigate
      */
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return activity?.let {
@@ -17,9 +17,7 @@ class DialogScreen : DialogFragment() {
             builder.setMessage("You are about to login")
                 .setPositiveButton("OK") { dialog, id ->
                     findNavController().apply {
-                        navigate(R.id.action_dialogScreen_to_homeActivity)
-                        //code for cleaning all backstack 
-                        activity?.finishAffinity()
+                        navigate(R.id.action_dialogScreen_to_homeFragment)
                     }
                 }
                 .setNegativeButton("Cancel", { dialog, id ->
